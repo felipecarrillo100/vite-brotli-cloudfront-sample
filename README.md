@@ -27,8 +27,9 @@ AWS CloudFront has a strict **10MB limit** for automatic compression. This proje
 npm install
 ```
 
-2. **Environment:**
-   Create a `.env` file in the root directory and add your Mapbox token:
+2. **Environment:** (Optional step)
+
+Create a `.env` file in the root directory and add your Mapbox token if you have one. This will add streets map to the demo,
 
 ```text
 VITE_MAPBOX_KEY=your_mapbox_access_token
