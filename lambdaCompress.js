@@ -8,8 +8,9 @@ exports.handler = (event, context, callback) => {
     const headers = request.headers;
     const uri = request.uri;
 
-    // Modified Regex: Added 'geojson' to the targeted file types
-    if (uri.match(/\.(js|css|geojson)$/)) {
+    // Targeted Match: Define a match patter for the pre-compressed files
+    // This example ONLY rewrites NYBuildings.geojson
+    if (uri === '/NYBuildings.geojson') {
         const aeHeader = headers['accept-encoding'];
         const acceptEncoding = (aeHeader && aeHeader.length > 0) ? aeHeader[0].value : '';
 
@@ -21,8 +22,11 @@ exports.handler = (event, context, callback) => {
         }
 
         // Log the rewrite for CloudWatch debugging
-        console.log(`Rewriting ${uri} to ${request.uri}`);
+        console.log(`[Lambda@Edge] Rewriting ${uri} to ${request.uri}`);
     }
 
+    // All other files (JS, CSS, etc.) pass through normally.
+    // CloudFront will use its "Automatic Compression" for them if enabled.
     callback(null, request);
 };
+
