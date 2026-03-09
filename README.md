@@ -53,13 +53,16 @@ npm install -g cloudfrontize-lambda-at-edge
 Point CloudFrontize to your /dist folder and your Lambda logic:
  
 ```bash
-cloudfrontize ./dist --edge ./lambdaCompress.js -d -C
+cloudfrontize ./dist --edge ./lambdaCompress.js -d
 ```
 
+* `--edge` Indicates the location of the Lambda@Edge function
+* `-d` Option enabled debug
 ---
 
 
-*Detailed article link coming soon.*
+### Detailed article link coming soon.
+This sample is a complement to this DEV.to article https://dev.to/felipecarrillo100/why-is-my-cdn-slow-bypassing-the-10mb-compression-limit-on-aws-cloudfront-1okn 
 
 ---
 
