@@ -61,7 +61,7 @@ cloudfrontize ./dist --edge ./lambdaCompress.js -d
 ---
 
 
-### Detailed article link coming soon.
+### Detailed article
 This sample is a complement to this DEV.to article https://dev.to/felipecarrillo100/why-is-my-cdn-slow-bypassing-the-10mb-compression-limit-on-aws-cloudfront-1okn 
 
 ---
