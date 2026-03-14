@@ -46,9 +46,9 @@ Inspect the `dist/` folder to see the 12MB GeoJSON alongside its 1.3MB `.br` cou
 
 4. **Simulate the Lambda@Edge:**
 
-If not yet installed, install `cloudfrontize-lambda-at-edge` globally:
+If not yet installed, install **[cloudfrontize](https://www.npmjs.com/package/cloudfrontize)** globally:
 ```bash
-npm install -g cloudfrontize-lambda-at-edge
+npm install -g cloudfrontize
 ```
 Point CloudFrontize to your /dist folder and your Lambda logic:
  
